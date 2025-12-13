@@ -11,7 +11,7 @@ const lastVisitProxyCookie = "__PROXY_VISITEDSITE__";
 const passwordCookieName = "__PROXY_PWD__";
 const proxyHintCookieName = "__PROXY_HINT__";
 const password = "";
-const showPasswordPage = true;
+const showPasswordPage = false;
 const replaceUrlObj = "__location__yproxy__";
 
 var thisProxyServerUrlHttps;
@@ -38,8 +38,7 @@ var proxy_host_with_schema = proxy_protocol + "//" + proxy_host + "/"; //代理�
 var original_website_url_str = window.location.href.substring(proxy_host_with_schema.length); //被代理的【完整】地址 如：https://example.com/1?q#1
 var original_website_url = new URL(original_website_url_str);
 
-var original_website_host = "login.microsoftonline.com";
-original_website_host = original_website_host.split('/')[0]; //被代理的Host proxied_website.com
+var original_website_host = "login.microsoftonline.com"
 
 var original_website_host_with_schema = original_website_url_str.substring(0, original_website_url_str.indexOf("://")) + "://" + original_website_host + "/"; //加上https的被代理的host， https://proxied_website.com/
 
